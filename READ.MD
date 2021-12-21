@@ -26,3 +26,11 @@
   4. unknown 타입은 모든 타입을 다 사용할수 있지만, unknown 타입이다. 즉 string 타입에 unknown 타입의 변수가 들어갈수 없다.
   5. Union 타입은 새로운 Union 타입이다. 즉 (string | number) 은 연산이 불가능하다
   6. 보통 any 나 unknown 을 부여할 경우는 없다.
+
+- 함수에 타입지정하는 법 & void 타입 (function_example.ts)
+
+  1. 함수의 파라미터 와 return 에 타입을 지정할수 있다
+  2. void 는 공허함 이라는 뜻으로 return 이 없을때의 타입을 말한다
+  3. 파라미터가 옵션인 경우 파라미터 뒤에 ? 를 붙인다
+  4. 파라미터 와 return 에 union type 을 부여할수 있다
+  5. Union 타입은 새로운 Union 타입이다. 즉 (string | number) 은 연산이 불가능하다
