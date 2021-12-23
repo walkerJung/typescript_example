@@ -58,3 +58,14 @@
   2. union type 으로 설정할수 있다
   3. 함수에도 똑같이 적용이 가능하다
   4. as const 문법
+
+- 함수와 methods에 type alias 지정하는 법 (function_methods_example.ts)
+
+  1. 함수 타입은 type FnType = () => {} 지정한다. 중괄호 안에 return 만 있다면 중괄호와 return 생략 가능하다
+  2. 함수 type alias 를 사용하려면 변수에 함수를 담는 형식으로 사용한다.
+
+- 타입스크립트로 HTML 변경과 조작할 때 주의점
+
+  1. querySelector 로 불러온 변수를 가지고 narrowing 해서 변경한다
+  2. a 태그는 HTMLAnchorElement, img 태그는 HTMLImageElement, h4 태그는 HTMLHeadingElement 다양한 타입명칭이 있는데 자동완성이 잘되는편이다
+  3. optional chaining 문법을 사용한다. object?.~~ object 가 있으면 뽑아주고, 없다면 undefined 를 남겨놓는다.

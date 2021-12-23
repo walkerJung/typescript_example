@@ -30,6 +30,9 @@ var removeDash = function (x) {
     둘째 파라미터엔 cutZero, 셋째 파라미터엔 removeDash 라는 함수들만 입력할 수 있게 파라미터의 타입도 지정해봅시다.
 */
 function onetwothree(x, y, z) {
+    var result = y(x);
+    var result2 = z(result);
+    console.log(result2);
     return removeDash(cutZero(x));
 }
 onetwothree("010-1111-2222", cutZero, removeDash);
