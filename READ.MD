@@ -34,3 +34,9 @@
   3. 파라미터가 옵션인 경우 파라미터 뒤에 ? 를 붙인다
   4. 파라미터 와 return 에 union type 을 부여할수 있다
   5. Union 타입은 새로운 Union 타입이다. 즉 (string | number) 은 연산이 불가능하다
+
+- 타입 확정하기 Narrowing & Assertion
+
+  1. Union type 의 경우에는 함수 내에서 if 조건을 주면서 소스를 작성하는게 Narrowing
+  2. if 조건 안에 typeof 를 사용하여 Narrowing 한다. 비교는 꼭 문자열로 한다. 'number', 'string', 'boolean' 등등
+  3. Assertion 은 정말 확실할때 아니면 사용하지 않는다.
