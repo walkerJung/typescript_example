@@ -50,3 +50,11 @@
   5. 속성중에 선택사항인 속성이 있다면 ? 를 붙여준다. ? 는 undefined 라는 타입도 가질수 있다 라는 뜻이다
   6. 변수로 만든 type 또한 | 로 union 시킬수 있다
   7. object type 은 & 로 extend(합치다) 할수있다
+  8. type 키워드는 재정의가 불가능합니다.
+
+- Literal Types로 만드는 const 변수 유사품 (as_const_example.ts)
+
+  1. Literal Type 은 어떠한 변수가 미리 골라놓은 데이터만 가질수 있게 해준다. 특정 글자나 숫자만 가질수 있게 제한을 두는것
+  2. union type 으로 설정할수 있다
+  3. 함수에도 똑같이 적용이 가능하다
+  4. as const 문법
