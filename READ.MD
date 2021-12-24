@@ -90,3 +90,6 @@
   2. 일반적으로 interface 는 extends 로 합치고, type alias 는 & 로 합친다
   3. interface 도 & 로 합칠수 있지만, type alias 는 extends 가 불가능하다
   4. interface 는 중복선언을 허용하며, 중복선언 시 extends 한것처럼 작동한다
+  5. type alias 는 중복선언을 허용하지 않는다
+  6. 일반적으로 type alias 를 사용하면 되는데, 다른 사람이 내 코드를 많이 이용할것같으면 interface 로 유연하게 소스를 짜자
+  7. object 내부 속성이 중복일땐 interface 와 type alias 전부 에러가 발생한다
