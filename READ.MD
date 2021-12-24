@@ -69,3 +69,24 @@
   1. querySelector 로 불러온 변수를 가지고 narrowing 해서 변경한다
   2. a 태그는 HTMLAnchorElement, img 태그는 HTMLImageElement, h4 태그는 HTMLHeadingElement 다양한 타입명칭이 있는데 자동완성이 잘되는편이다
   3. optional chaining 문법을 사용한다. object?.~~ object 가 있으면 뽑아주고, 없다면 undefined 를 남겨놓는다.
+
+- prototype 문법 짚어보기
+
+  1. prototype 은 부모의 속성이고, class 나 function 안에 선언한 this.~~ 들은 자식도 속성으로 가지고 태어난다
+  2. object 에서 속성을 뽑을때 본인이 가지고있는지 없다면? 부모가 가지고있는지 이런식으로 속성을 찾아온다
+  3. 예를들면 array 에 array.sort() 를 사용할수 있는이유도 같은이유다. var array = new Array(4,2,1); 이런식으로 선언하기에 Array Class 에 sort가 있는것, 검증은 Array.prototype 을 console 에 때려보자
+
+- class 만들 때 타입지정 가능 (class_example.ts)
+
+  1. Class 내부의 필드값 과 constructor 는 같은 기능을 하지만, constructor 는 파라미터를 받아올수 있다
+  2. Typescript 의 constructor 는 constructor 위에서 변수를 미리 선언해야한다
+  3. Class 내부의 필드값에도 type 지정이 가능하다
+  4. constructor 파라미터에도 type 지정이 가능하다
+  5. Class 내부의 함수에도 type 지정이 가능하다
+
+- Object에 타입지정하려면 interface 이것도 있음
+
+  1. interface 는 유연하고, type 은 엄격하다
+  2. 일반적으로 interface 는 extends 로 합치고, type alias 는 & 로 합친다
+  3. interface 도 & 로 합칠수 있지만, type alias 는 extends 가 불가능하다
+  4. interface 는 중복선언을 허용하며, 중복선언 시 extends 한것처럼 작동한다
