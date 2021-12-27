@@ -84,7 +84,7 @@
   4. constructor 파라미터에도 type 지정이 가능하다
   5. Class 내부의 함수에도 type 지정이 가능하다
 
-- Object에 타입지정하려면 interface 이것도 있음
+- Object에 타입지정하려면 interface 이것도 있음 (interface_example.ts)
 
   1. interface 는 유연하고, type 은 엄격하다
   2. 일반적으로 interface 는 extends 로 합치고, type alias 는 & 로 합친다
@@ -94,10 +94,10 @@
   6. 일반적으로 type alias 를 사용하면 되는데, 다른 사람이 내 코드를 많이 이용할것같으면 interface 로 유연하게 소스를 짜자
   7. object 내부 속성이 중복일땐 interface 와 type alias 전부 에러가 발생한다
 
-- 함수 rest 파라미터, destructuring 할 때 타입지정
+- 함수 rest 파라미터, destructuring 할 때 타입지정 (rest_params_example.ts)
 
   1. 함수에 어떤 파라미터가 몇개 들어올지 미리 정의하기 어려운경우 (3개인제 100개인지) 파라미터 앞에 ... 을 붙여서 rest 파라미터로 만들어준다. rest 파라미터는 배열형태로 담겨있다
   2. rest 파라미터에 type 지정은 언제나 []로 오기때문에 어떤 [] 인지만 지정해주면 된다
   3. Spread operator 는 중괄호, 대괄호를 벗기는것으로 rest 파라미터와는 다른 의미이다
   4. object destructuring할 땐 변수이름을 속성이름과 맞춰주는게 편리하고 (안맞추면 더 복잡함), array destructuring할 땐 변수이름 마음대로 작명해도 된다
-  5.
+  5. rest 파라미터 말고 다른 파라미터가 또 있다면, rest 파라미터는 맨 뒤에만 사용 가능하다
