@@ -61,3 +61,44 @@ function subject(oj: { subject: string | string[] }): string {
 }
 
 subject({ subject: ["hi", "hello", "bye"] });
+
+/* && 연산자 narrowing */
+function printAll(strs: string | undefined) {
+  if (strs && typeof strs === "string") {
+    console.log(strs);
+  }
+}
+
+/* in 연산자 narrowing */
+type Fish = { swim: string };
+type Bird = { fly: string };
+function 함수(animal: Fish | Bird) {
+  if ("swim" in animal) {
+    return animal.swim;
+  }
+  return animal.fly;
+}
+
+/* instanceof narrowing */
+let 날짜 = new Date();
+if (날짜 instanceof Date) {
+  console.log("참이에요");
+}
+
+/* type 을 특정지을수 있는걸로 narrowing */
+type Car2 = {
+  wheel: "4개";
+  color: string;
+};
+type Bike = {
+  wheel: "2개";
+  color: string;
+};
+
+function narrowingexam(x: Car2 | Bike) {
+  if (x.wheel === "4개") {
+    console.log("the car is " + x.color);
+  } else {
+    console.log("the bike is " + x.color);
+  }
+}

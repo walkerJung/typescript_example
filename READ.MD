@@ -101,3 +101,22 @@
   3. Spread operator 는 중괄호, 대괄호를 벗기는것으로 rest 파라미터와는 다른 의미이다
   4. object destructuring할 땐 변수이름을 속성이름과 맞춰주는게 편리하고 (안맞추면 더 복잡함), array destructuring할 땐 변수이름 마음대로 작명해도 된다
   5. rest 파라미터 말고 다른 파라미터가 또 있다면, rest 파라미터는 맨 뒤에만 사용 가능하다
+
+- Narrowing 할 수 있는 방법 더 알아보기 (narrowing_example.ts)
+
+  1. && 연산자 사용하기
+  2. in 연산자로 object 자료 narrowing 이 가능하다
+  3. class 로 생성된 object 라면 instanceof 로 narrowing 이 가능하다
+  4. 논리적으로 이 타입인지 특정지을수 있으면 narrowing 으로 인정한다
+
+- public, private 쓰는거 보니까 타입스크립트 귀여운편 (class_case_example.ts)
+
+  1. public 속성 은 class 내부, 외부 어디서든 다 쓸수 있다
+  2. private 속성 은 class 내부에서만 사용 및 수정 할수있다
+  3. private 속성 을 class 외부에서 변경하려면, class 내부에 변경하는 함수를 만들어서 변경한다. 원본 데이터를 지키면서 코딩하는 방식 주로 react 개발할때 많이쓰는 방식이다
+
+- class에서 사용가능한 protected, static 키워드 (class_case_example.ts)
+
+  1. 비슷한 class 를 만들때는 extends 문법을 활용한다
+  2. protected 속성은 extends 되어있는 class 내부에서 수정이 가능하다, private 속성은 오직 본인 class 에서만 사용, 수정이 가능하다. private 의 확장판이라고 생각하면 된다. 자식들에게선 수정 불가능하다
+  3. static 은 class 내부에 작성하는 메모같은 것이다. class 외부에서 변경할수 있다. 보통은 private 를 같이 사용해서 수정함수를 만들어서 수정한다. static 속성은 Class명.속성명(User.x 이런식) 으로 사용, 수정한다

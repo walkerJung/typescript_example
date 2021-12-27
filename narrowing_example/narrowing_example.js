@@ -60,3 +60,28 @@ function subject(oj) {
     }
 }
 subject({ subject: ["hi", "hello", "bye"] });
+/* && 연산자 narrowing */
+function printAll(strs) {
+    if (strs && typeof strs === "string") {
+        console.log(strs);
+    }
+}
+function 함수(animal) {
+    if ("swim" in animal) {
+        return animal.swim;
+    }
+    return animal.fly;
+}
+/* instanceof narrowing */
+var 날짜 = new Date();
+if (날짜 instanceof Date) {
+    console.log("참이에요");
+}
+function narrowingexam(x) {
+    if (x.wheel === "4개") {
+        console.log("the car is " + x.color);
+    }
+    else {
+        console.log("the bike is " + x.color);
+    }
+}
