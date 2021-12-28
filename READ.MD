@@ -120,3 +120,18 @@
   1. 비슷한 class 를 만들때는 extends 문법을 활용한다
   2. protected 속성은 extends 되어있는 class 내부에서 수정이 가능하다, private 속성은 오직 본인 class 에서만 사용, 수정이 가능하다. private 의 확장판이라고 생각하면 된다. 자식들에게선 수정 불가능하다
   3. static 은 class 내부에 작성하는 메모같은 것이다. class 외부에서 변경할수 있다. 보통은 private 를 같이 사용해서 수정함수를 만들어서 수정한다. static 속성은 Class명.속성명(User.x 이런식) 으로 사용, 수정한다
+
+- 타입도 import export 해서 씁니다 그리고 namespace (namespace_example.ts)
+
+  1. export 는 다른곳에서도 쓸수있게하는것, import 는 export 를 가져다 쓰는것
+  2. 원하는 것만 import 할땐 {} 안에 명칭을 맞춰서 가지고오고, as 로 명칭 변경이 가능하다
+  3. type 중복이 많다면 namespace 로 한번 더 감싸주어 사용한다
+
+- 타입을 파라미터로 입력하는 Generic
+
+  1. Generic <> 을 사용하여 함수에 type 을 파라미터로 넣을수 있다
+  2. extends 키워드로 넣을수 있는 type 을 제한할수 잇다
+  3. Class 에도 사용이 가능하다
+  4. Generic <> 은 type 용 파라미터 라고 생각하면 된다
+  5. 타입파라미터는 자유작명가능 보통 <T> 이런걸로 많이 합니다
+  6. { 속성 } 을 extends 하는것과 number, string 등등 type 을 extends 하는것은 다르다
