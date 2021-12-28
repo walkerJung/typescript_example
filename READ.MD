@@ -135,3 +135,18 @@
   4. Generic <> 은 type 용 파라미터 라고 생각하면 된다
   5. 타입파라미터는 자유작명가능 보통 <T> 이런걸로 많이 합니다
   6. { 속성 } 을 extends 하는것과 number, string 등등 type 을 extends 하는것은 다르다
+
+- React + TypeScript 사용할 때 알아야할 점
+
+  1. npx create-react-app 프로젝트명 --template typescript -> 새로운 프로젝트 만들때
+  2. npm install --save typescript @types/node @types/react @types/react-dom @types/jest -> 기존 프로젝트에 타입스크립트 더할 때
+  3. 일반 변수, 함수 타입지정
+  4. JSX 타입 지정 -> JSX.Element
+  5. function component 타입지정 -> return type 은 JSX.Element, 파라미터는 props 형식에 따라 type 지정
+  6. state 문법 사용시 타입지정 -> useState 함수앞에 <> (흔치 않은 경우)
+
+- array 자료에 붙일 수 있는 tuple type(tuple_type_example.ts)
+
+  1. tuple type 은 array 에 붙일수 있는 타입이고, 자료의 위치까지 정확히 지정하는 타입이다
+  2. [] 안에 차례로 세부 타입을 기입하면, 그 순서와 type 에 맞지 않으면 에러가 난다
+  3. tuple type 안에서도 옵션(?) 설정이 가능하다. 하지만 배열의 맨 뒤에서 부터 사용이 가능하다
