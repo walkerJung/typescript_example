@@ -164,3 +164,11 @@
   2. 정의해둔 타입은 export 해서 사용해야한다. d.ts 는 기본적으로 로컬모듈
   3. d.ts 파일을 레퍼런스용으로 사용하려면 tsconfig.json 에 "declaration": true 를 추가해준다
   4. 유명한 JavaScript 라이브러리들은 d.ts 를 제공하고있으니 찾아서 사용하면 된다
+
+- implements 키워드
+
+  1. implements 는 타입지정문법이 아니다. 단순히 interface에 들어있는 속성을 가지고 있는지 확인만 하라는뜻
+
+- object index signatures (object_index_example.ts)
+
+  1. object 타입을 인터페이스로 지정할때 참고하면 좋은방법
